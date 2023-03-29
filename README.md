@@ -291,6 +291,8 @@ sidebarJs();
 <!-- Галерея гармошка -->
 <h2 align="center">Галерея гармошка</h2>
 
+![ezgif com-optimize](https://user-images.githubusercontent.com/69309199/228493979-962ff5dc-6bf3-4d1c-aad2-7038aede98cb.gif)
+
 <picture>
 <img width="1438" alt="gallery" src="https://user-images.githubusercontent.com/69309199/228491380-d5d4a13b-75d6-4e32-9399-a27b9627e663.png">
 </picture>
