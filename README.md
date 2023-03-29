@@ -1,3 +1,7 @@
+<h1 align="center">Компоненты сайта</h1>
+
+
+<h2 align="center">Шапка сайта</h2>
 <picture>
 <img width="1439" alt="nav" src="https://user-images.githubusercontent.com/69309199/228479057-17669790-972b-4eb2-ab2f-52a3d44ccd25.png">
 </picture>
@@ -5,12 +9,11 @@
 <!-- Toggle -->
 <details>
 <summary>
-Шапка сайта
+Как сделать
 </summary>
-
-<h3 align="center">Код</h3>
   
-html код:
+html:
+  
 ```
 <nav class="nav">
     <span class="nav-logo">Web Dev</span>
@@ -29,6 +32,46 @@ html код:
       </li>
     </ul>
   </nav>
+  
 ```
+css:
+ 
+```
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.nav-logo {
+  font-family: var(--ff-secondary);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: inherit;
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+  display: block;
+}
+
+.nav-links a:hover {
+  transform: scale(1.2);
+}
+  
+```
+  
+  
 <!-- Окончание -->
 </details>
