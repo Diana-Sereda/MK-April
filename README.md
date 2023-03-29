@@ -1,13 +1,16 @@
 <h1 align="center">Компоненты сайта</h1>
 
 
+<!-- Nav-->
 <h2 align="center">Шапка сайта</h2>
+
 <picture>
 <img width="1439" alt="nav" src="https://user-images.githubusercontent.com/69309199/228479057-17669790-972b-4eb2-ab2f-52a3d44ccd25.png">
 </picture>
 
-<!-- Toggle -->
+<!-- Реализация-->
 <details>
+  
 <summary>
 Как сделать
 </summary>
@@ -71,7 +74,7 @@ css:
 }
   
 ```
-  
-  
-<!-- Окончание -->
+<!-- Реализация конец -->
 </details>
+
+<!-- Nav ends-->
