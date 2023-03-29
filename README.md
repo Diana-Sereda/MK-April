@@ -660,6 +660,7 @@ tabs();
 <h2 align="center">Аккордеон</h2>
 
 <picture>
+<img width="1138" alt="accordion" src="https://user-images.githubusercontent.com/69309199/228497191-aa3a343a-d3b9-4335-8650-bf8d5ec9e1cf.png">
 
 </picture>
 
@@ -901,6 +902,547 @@ accordion();
 
 <!-- ends-->
  <hr>
+
+<!--Карусель -->
+<h2 align="center">Карусель </h2>
+
+<picture>
+<img width="1414" alt="slider" src="https://user-images.githubusercontent.com/69309199/228497551-ed5c942f-0be8-436c-b555-57cb78e2bdaa.png">
+</picture>
+
+<!-- Реализация-->
+
+<details>
+  
+<summary>
+Как сделать
+</summary>
+  
+  
+<h3 align="center">HTML</h2>
+  
+```
+<!--Карусель -->
+ <section id="skills" class="skills">
+    <div class="title">
+      <h3>9 важных Soft Skills для разработчика</h3>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Teamplayer</div>
+          <p class="descr">Teamplayer — это про то, что на тебя могут рассчитывать коллеги, а ты тоже можешь
+            рассчитывать
+            на них.</p>
+          <div class="num">01</div>
+          <img src="img/q-1.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Коммуникация</div>
+          <p class="descr">Умение «экологично» взаимодействовать в команде — это очень важный показатель.
+            Сюда же входит умение решать конфликты, а не создавать их, ведение переговоров и деловая переписка.
+          </p>
+          <div class="num">02</div>
+          <img src="img/q-2.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Self-менеджмент</div>
+          <p class="descr">Работодателям нужны самостоятельные разработчики, которые могут справиться с поставленной
+            задачей — распланировать сроки
+            и последовательность задачи, разбить большую задачу на более мелкие.</p>
+          <div class="num">03</div>
+          <img src="img/q-3.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Обучение и развитие</div>
+          <p class="descr">Быстро обучаться и постоянно учиться. В современной веб-разработке не получиться выучить
+            технологию один раз и больше не
+            учиться.</p>
+          <div class="num">04</div>
+          <img src="img/q-4.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Ответственность</div>
+          <p class="descr">Ответственность за качество своего кода. Не менее важна и ответственность за сроки, которые
+            вы обозначили для выполнения задачи.</p>
+          <div class="num">05</div>
+          <img src="img/q-5.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Продуктовое мышление</div>
+          <p class="descr">Продуктовое мышление — это когда у вас есть навык думать про бизнес, про продукт, про
+            клиентов, а не про то какой
+            новомодный фреймворк использовать.</p>
+          <div class="num">06</div>
+          <img src="img/q-6.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Проактивность</div>
+          <p class="descr">Проактивность это не только готовность браться за работу или брать на себя новую
+            ответственность, но и активная позиция
+            в решении ваших текущих задач.</p>
+          <div class="num">07</div>
+          <img src="img/q-7.jpeg" />
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Внимание к деталям</div>
+          <p class="descr">В работе веб-разработчика очень важно внимание к деталям, потому что этих деталей очень
+            много.</p>
+          <div class="num">08</div>
+          <img src="img/q-9.jpeg" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-box">
+          <div class="title">Тайм-менеджмент</div>
+          <p class="descr">Если вы хотите успевать учиться, развиваться, эффективно работать, отдыхать, заниматься
+            хобби, встречаться с друзьями,
+            то без тайм-менеджмента вам не обойтись.</p>
+          <div class="num">09</div>
+          <img src="img/q-8.jpeg" />
+        </div>
+      </div>
+    </div>
+  </section>
+```
+<h3 align="center">CSS</h2>
+
+Название файла: 
+  
+```
+carousel.css
+```
+  
+Стили:
+  
+```
+.skills-title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.carousel {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.carousel-item {
+  --items: 10;
+  --width: clamp(150px, 30vw, 400px);
+  --height: clamp(200px, 40vw, 500px);
+  --x: calc(var(--active) * 800%);
+  --y: calc(var(--active) * 200%);
+  --rot: calc(var(--active) * 120deg);
+  --opacity: calc(var(--zIndex) / var(--items) * 3.4 - 2);
+  overflow: hidden;
+  position: absolute;
+  z-index: var(--zIndex);
+  width: var(--width);
+  height: var(--height);
+  margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  user-select: none;
+  transform-origin: 0% 100%;
+  pointer-events: all;
+  transform: translate(var(--x), var(--y)) rotate(var(--rot));
+  transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
+}
+
+.carousel-box {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--ff-primary);
+}
+
+.carousel-box:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8646052170868348) 85%);
+}
+
+.carousel-item .title {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  top: 63%;
+  left: 20px;
+  font-size: 24px;
+}
+
+.carousel-item .descr {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  top: 75%;
+  left: 20px;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.carousel-item .num {
+  font-family: var(--ff-secondary);
+  position: absolute;
+  z-index: 1;
+  /* color: #fff; */
+  color: var(--heading-clr);
+  top: 10px;
+  left: 20px;
+  transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+  font-size: 80px;
+
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}  
+```
+Подключение файла: 
+  
+```
+@import "css-modules/carousel.css";
+```
+
+<h3 align="center">JavaScript</h2>
+
+Название файла: 
+  
+```
+carousel.js
+```
+  
+Код:
+  
+```
+const carousel = () => {
+  /*--------------------
+Vars
+--------------------*/
+  let progress = 50;
+  let startX = 0;
+  let active = 0;
+  let isDown = false;
+
+  /*--------------------
+Contants
+--------------------*/
+  const speedWheel = 0.02;
+  const speedDrag = -0.1;
+
+  /*--------------------
+Get Z
+--------------------*/
+  const getZindex = (array, index) =>
+    array.map((_, i) =>
+      index === i ? array.length : array.length - Math.abs(index - i)
+    );
+
+  /*--------------------
+Items
+--------------------*/
+  const $items = document.querySelectorAll(".carousel-item");
+  // const $cursors = document.querySelectorAll(".cursor");
+
+  const displayItems = (item, index, active) => {
+    const zIndex = getZindex([...$items], active)[index];
+    item.style.setProperty("--zIndex", zIndex);
+    item.style.setProperty("--active", (index - active) / $items.length);
+  };
+
+  /*--------------------
+Animate
+--------------------*/
+  const animate = () => {
+    progress = Math.max(0, Math.min(progress, 100));
+    active = Math.floor((progress / 100) * ($items.length - 1));
+
+    $items.forEach((item, index) => displayItems(item, index, active));
+  };
+  animate();
+
+  /*--------------------
+Click on Items
+--------------------*/
+  $items.forEach((item, i) => {
+    item.addEventListener("click", () => {
+      progress = (i / $items.length) * 100 + 10;
+      animate();
+    });
+  });
+
+  /*--------------------
+Handlers
+--------------------*/
+  const handleWheel = (e) => {
+    const wheelProgress = e.deltaY * speedWheel;
+    progress = progress + wheelProgress;
+    animate();
+  };
+
+  const handleMouseMove = (e) => {
+    // if (e.type === "mousemove") {
+    //   $cursors.forEach(($cursor) => {
+    //     $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    //   });
+    // }
+    if (!isDown) return;
+    const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+    const mouseProgress = (x - startX) * speedDrag;
+    progress = progress + mouseProgress;
+    startX = x;
+    animate();
+  };
+
+  const handleMouseDown = (e) => {
+    isDown = true;
+    startX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+  };
+
+  const handleMouseUp = () => {
+    isDown = false;
+  };
+
+  /*--------------------
+Listeners
+--------------------*/
+  document.addEventListener("mousewheel", handleWheel);
+  document.addEventListener("mousedown", handleMouseDown);
+  document.addEventListener("mousemove", handleMouseMove);
+  document.addEventListener("mouseup", handleMouseUp);
+  document.addEventListener("touchstart", handleMouseDown);
+  document.addEventListener("touchmove", handleMouseMove);
+  document.addEventListener("touchend", handleMouseUp);
+};
+export default carousel;
+
+```
+Подключение файла: 
+  
+```
+import carousel from "./js-modules/carousel.js";
+  carousel();
+```
+<!-- конец -->
+</details>
+
+<!-- ends-->
+ <hr>
+
+<!--Grid сетка -->
+<h2 align="center">Grid сетка</h2>
+
+<picture>
+<img width="1383" alt="news" src="https://user-images.githubusercontent.com/69309199/228499175-7c923236-491a-46c7-abf9-6f2721e82293.png">
+</picture>
+
+<!-- Реализация-->
+
+<details>
+  
+<summary>
+Как сделать
+</summary>
+  
+  
+<h3 align="center">HTML</h2>
+  
+```
+<!-- Grid сетка -->
+<section id="news" class="news">
+    <div class="title">
+      <h3>Интересные статьи по веб-разарботке</h3>
+    </div>
+    <div class="news-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class=" flip-card-front ">
+            <h4>Как освоить фронтенд-разработку в 2022 году: дорожная карта</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Хотите узнать, как стать фронтенд-разработчиком в 2022 году? Составили для вас схему развития и приложили
+              материалы для
+              изучения.</p>
+            <a href="https://tproger.ru/articles/frontend-roadmap-2021/" target="_blank">Читать</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class=" flip-card-front ">
+            <h4>10 шпаргалок по HTML и CSS</h4>
+          </div>
+          <div class="flip-card-back">
+            <a href="https://tproger.ru/articles/10-shpargalok-po-html-i-css/" target="_blank">Читать</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class=" flip-card-front ">
+            <h4>15 расширений для VSCode, которые упростят разработку</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Чтобы облегчить разработку можно использовать специальные плагины. В статье собрали 15 расширений для
+              VSCode,
+              чтобы было
+              удобнее писать код.</p>
+            <a href="https://tproger.ru/articles/15-raswirenij-dlya-vscode-kotorye-uprostyat-razrabotku/"
+              target="_blank">Читать</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class=" flip-card-front ">
+            <h4>Эволюция интерфейсов: как изменилась веб-разработка за 20 лет</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Ретроградствуем и вспоминаем, как менялись инструменты веб-разработчиков и какими были интерфейсы сайтов
+              за
+              последние 20
+              лет.</p>
+            <a href="https://tproger.ru/articles/jevoljucija-interfejsov-kak-izmenilas-veb-razrabotka-za-20-let/"
+              target="_blank">Читать</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class=" flip-card-front ">
+            <h4>Если вы умеете «покрасить кнопочку», но хотите узнать больше о вёрстке веб-приложений</h4>
+            </h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Рассказываем о свойстве float, разнице между флексами и гридами, об адаптивной и респонсивной вёрстке и
+              методологиях
+              вёрстки.</p>
+            <a href="https://tproger.ru/articles/esli-vy-umeete-pokrasit-knopochku-no-hotite-uznat-bolshe-o-vjorstke-veb-prilozhenij/"
+              target="_blank">Читать</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class=" flip-card-front ">
+            <h4>Полезные уроки по программированию на HTML и CSS для детей</h4>
+          </div>
+          <div class="flip-card-back">
+            <a href="https://tproger.ru/articles/poleznye-uroki-po-programmirovaniju-na-html-i-css-dlja-detej/"
+              target="_blank">Читать</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class=" flip-card-front ">
+            <h4>Основы фронтенд-разработки: фреймворки, DOM-дерево, взаимодействие с бэкендом</h4>
+          </div>
+          <div class="flip-card-back">
+            <p>Современная сфера веб-разработки пестрит всевозможными технологиями и инструментами, среди которых
+              новичок
+              может легко
+              растеряться.</p>
+            <a href="https://habr.com/ru/company/ruvds/blog/722464/" target="_blank">Читать</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  
+```
+<h3 align="center">CSS</h2>
+
+Название файла: 
+  
+```
+
+```
+  
+Стили:
+  
+```
+
+  
+```
+Подключение файла: 
+  
+```
+
+```
+
+<h3 align="center">JavaScript</h2>
+
+Название файла: 
+  
+```
+
+```
+  
+Код:
+  
+```
+
+```
+Подключение файла: 
+  
+```
+
+```
+<!-- конец -->
+</details>
+
+<!-- ends-->
+ <hr>
+
+
+
 
 
 
