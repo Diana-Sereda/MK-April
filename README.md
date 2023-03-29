@@ -16,7 +16,7 @@
 </summary>
   
   
-<h3 align="center" color="red" >HTML</h2>
+<h3 align="center" color="#ff863b">HTML</h2>
   
 ```
 <!--Шапка сайта-->
