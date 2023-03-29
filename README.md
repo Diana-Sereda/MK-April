@@ -46,7 +46,8 @@
 nav.css
 ```
   
- 
+Стили:
+  
 ```
 .nav {
   max-width: var(--max-width);
