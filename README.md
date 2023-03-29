@@ -11,6 +11,7 @@
 <h3 align="center">Код</h3>
   
 html код:
+html
 <nav class="nav">
     <span class="nav-logo">Web Dev</span>
     <ul class="nav-links">
