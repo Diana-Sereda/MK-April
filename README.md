@@ -1523,6 +1523,8 @@ news.css
 
 <picture>
 <img width="68" alt="theme-dark" src="https://user-images.githubusercontent.com/69309199/228500557-03e25111-9655-418e-a6ab-e758618218e9.png">
+</picture>
+<picture>
 <img width="69" alt="theme-light" src="https://user-images.githubusercontent.com/69309199/228500593-d92f5c1f-fa7b-4951-8878-1955164f936b.png">
 </picture>
 
