@@ -15,7 +15,8 @@
 Как сделать
 </summary>
   
-html:
+  
+<h3 align="center">HTML</h2>
   
 ```
 <nav class="nav">
@@ -37,9 +38,13 @@ html:
   </nav>
   
 ```
-css: 
+<h3 align="center">CSS</h2>
 
-Название файла: nav.css
+Название файла: 
+  
+```
+nav.css
+```
   
  
 ```
@@ -80,7 +85,7 @@ css:
 Подключение файла: 
   
 ```
-  @import "css-modules/nav.css";
+@import "css-modules/nav.css";
 ```
 <!-- Реализация конец -->
 </details>
