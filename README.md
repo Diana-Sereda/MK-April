@@ -1393,7 +1393,6 @@ import carousel from "./js-modules/carousel.js";
 
       </div>
     </div>
-
   </section>
   
 ```
@@ -1402,38 +1401,116 @@ import carousel from "./js-modules/carousel.js";
 Название файла: 
   
 ```
-
+news.css
 ```
   
 Стили:
   
 ```
+.news-container {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 20px;
+}
 
+.flip-card {
+  position: relative;
+  transition: transform 0.5s linear;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  background-color: var(--heading-clr);
+  cursor: pointer;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+.flip-card:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.flip-card:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.flip-card:nth-child(4) {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.flip-card:nth-child(5) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.flip-card:nth-child(7) {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.flip-card-inner h4 {
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--bck-clr);
+}
+
+.flip-card-inner p {
+  font-size: 16px;
+  color: var(--bck-clr);
+  margin-bottom: 30px;
+}
+
+.flip-card-inner a {
+  background: var(--bck-clr);
+  color: inherit;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+}
   
 ```
 Подключение файла: 
   
 ```
-
-```
-
-<h3 align="center">JavaScript</h2>
-
-Название файла: 
-  
-```
-
-```
-  
-Код:
-  
-```
-
-```
-Подключение файла: 
-  
-```
-
+@import "css-modules/news.css";
 ```
 <!-- конец -->
 </details>
@@ -1441,43 +1518,111 @@ import carousel from "./js-modules/carousel.js";
 <!-- ends-->
  <hr>
 
+<!--Светлая/темная тема  -->
+<h2 align="center"> Светлая/темная тема </h2>
 
+<picture>
+<img width="68" alt="theme-dark" src="https://user-images.githubusercontent.com/69309199/228500557-03e25111-9655-418e-a6ab-e758618218e9.png">
+<img width="69" alt="theme-light" src="https://user-images.githubusercontent.com/69309199/228500593-d92f5c1f-fa7b-4951-8878-1955164f936b.png">
+</picture>
 
+<!-- Реализация-->
 
+<details>
+  
+<summary>
+Как сделать
+</summary>
+  
+  
+<h3 align="center">HTML</h2>
+  
+```
+<!--Светлая/темная тема  -->
+ <button class="theme-btn">
+    <i class="fa-solid fa-moon fa-flip-horizontal moon "></i>
+    <i class="fa-solid fa-sun sun d-none"></i>
+  </button>
+```
+<h3 align="center">CSS</h2>
 
+Название файла: 
+  
+```
+theme-btn.css
+```
+  
+Стили:
+  
+```
+.theme-btn {
+  position: relative;
+  bottom: 25px;
+  right: 25px;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--heading-clr);
+  color: var(--bck-clr);
+  z-index: 10;
+  transition: var(--transition);
+}
 
+.theme-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+}
 
+.d-none {
+  opacity: 0;
+}
+  
+```
+Подключение файла: 
+  
+```
+@import "css-modules/theme-btn.css";
+```
 
+<h3 align="center">JavaScript</h2>
 
+Название файла: 
+  
+```
+theme-btn.js
+```
+  
+Код:
+  
+```
+const theme = () => {
+  const toggleBtn = document.querySelector(".theme-btn");
+  const moon = document.querySelector(".moon");
+  const sun = document.querySelector(".sun");
+  toggleBtn.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark-theme");
+    moon.classList.toggle("d-none");
+    sun.classList.toggle("d-none");
+  });
+};
+export default theme;
 
+```
+Подключение файла: 
+  
+```
+import theme from "./js-modules/theme-btn.js";
+theme();
+```
+<!-- конец -->
+</details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- ends-->
+ <hr>
