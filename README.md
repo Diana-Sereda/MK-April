@@ -41,7 +41,6 @@ css:
 
 Название файла: nav.css
   
-Подключение файла: @import "css-modules/nav.css";
  
 ```
 .nav {
@@ -77,6 +76,11 @@ css:
   transform: scale(1.2);
 }
   
+```
+Подключение файла: 
+  
+```
+  @import "css-modules/nav.css";
 ```
 <!-- Реализация конец -->
 </details>
