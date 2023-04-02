@@ -148,7 +148,7 @@ nav.css
 Название файла: 
   
 ```
-sidebar.css  
+sidebar.css
 ```
   
 Стили:
