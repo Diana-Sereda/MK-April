@@ -1,3 +1,9 @@
+Инструкция:
+<a href="https://youtu.be/rRmVaYBQF_8" target="_blank">Видео инструкция</a>
+
+
+
+
 <h1 align="center">Компоненты сайта</h1>
 
 
