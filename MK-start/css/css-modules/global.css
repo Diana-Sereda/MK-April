@@ -1,0 +1,94 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 18px;
+  background: var(--bck-clr);
+  color: var(--text-clr);
+  line-height: 1.5;
+  transition: var(--transition);
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-secondary);
+  color: var(--heading-clr);
+}
+
+h2,
+h3 {
+  font-size: 55px;
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+
+}
+
+
+/*  global classes */
+
+/* section */
+section {
+  margin: 80px 0;
+  padding: 4rem 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+
+.title p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.dark-theme {
+  --bck-clr: #282C35;
+  --sidebck-clr: #1e2129;
+  --heading-clr: #fdeac6;
+  --text-clr: #F5EBEB;
+}
