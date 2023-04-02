@@ -304,6 +304,8 @@ sidebarJs();
 Как сделать
 </summary>
   
+  ![ezgif com-optimize](https://user-images.githubusercontent.com/69309199/229352996-e2082227-093c-49dd-bd90-ff50b7fb92d8.gif)
+
   
 <h3 align="center">HTML</h2>
   
