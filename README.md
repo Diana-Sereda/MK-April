@@ -303,12 +303,7 @@ sidebarJs();
 <summary>
 Как сделать
 </summary>
-  
- 
 
-  <picture>
-<img width="1438" alt="gallery" src="https://user-images.githubusercontent.com/69309199/229352996-e2082227-093c-49dd-bd90-ff50b7fb92d8.gif">
-</picture>
 
 <h3 align="center">HTML</h2>
   
