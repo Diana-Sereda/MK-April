@@ -1,0 +1,28 @@
+.theme-btn {
+  position: relative;
+  bottom: 25px;
+  right: 25px;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--heading-clr);
+  color: var(--bck-clr);
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.theme-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+}
+
+.d-none {
+  opacity: 0;
+}
