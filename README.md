@@ -1,5 +1,8 @@
 Инструкция:
-<a href="https://youtu.be/rRmVaYBQF_8" target="_blank">Видео инструкция</a>
+<a href="https://youtu.be/rRmVaYBQF_8" >Видео инструкция</a>
+
+Настройка VS code:
+<a href="https://youtu.be/_6oPTVnkiBs">Видео инструкция</a>
 
 
 
